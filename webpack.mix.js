@@ -7,5 +7,6 @@ mix
       require('postcss-cssnext')(),
       require('postcss-short')(),
       require('postcss-assets')(),
+      require('postcss-font-magician')(),
     ],
   });
