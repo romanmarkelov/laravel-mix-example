@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 mix
-  .sass('app/assets/scss/app.scss', 'app/dist/')
+  .sass('app/assets/scss/main.scss', 'app/dist/')
   .options({
     postCss: [
       require('postcss-cssnext')(),
