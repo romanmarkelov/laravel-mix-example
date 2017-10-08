@@ -1,0 +1,20 @@
+{
+  "name": "crazy-mix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Roman Markelov <webmarkelov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "laravel-mix": "1.4.5",
+    "normalize.css": "7.0.0",
+    "postcss-assets": "5.0.0",
+    "postcss-cssnext": "3.0.2",
+    "postcss-short": "4.1.0"
+  },
+  "private": true
+}

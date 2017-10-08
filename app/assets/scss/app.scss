@@ -1,0 +1,29 @@
+@import
+  '~normalize.css',
+  '~bootstrap/scss/bootstrap-grid.scss';
+
+body {
+  background-image: inline('../img/postcss.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+:root {
+  --some-color: red;
+}
+
+@custom-media --small-viewport (max-width: 30em);
+
+@media (--small-viewport) {
+  .example {
+    display: none;
+  }
+}
+
+.example {
+  color: var(--some-color);
+  &__test {
+    background-color: #444;
+    size: 48px;
+  }
+}
