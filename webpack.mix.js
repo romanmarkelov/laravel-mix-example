@@ -1,7 +1,13 @@
 const mix = require('laravel-mix');
+const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
+
+const PATHS = {
+  assets: 'app/assets',
+  dist: 'app/dist'
+};
 
 mix
-  .sass('app/assets/scss/main.scss', 'app/dist/')
+  .setPublicPath(PATHS.dist)
   .options({
     postCss: [
       require('postcss-cssnext')(),
@@ -9,4 +15,16 @@ mix
       require('postcss-assets')(),
       require('postcss-font-magician')(),
     ],
-  });
+  })
+  .js(`${PATHS.assets}/js/app.js`, 'js')
+  .sass(`${PATHS.assets}/scss/main.scss`, 'css')
+  .webpackConfig({
+    plugins: [
+      new NunjucksWebpackPlugin({
+        template: [
+          {from: `${PATHS.assets}/views/index.njk`, to: 'views/index.html', context: {user: 'webmarkelov'}},
+          {from: `${PATHS.assets}/views/news.njk`, to: 'views/news.html'}
+        ]
+      })
+    ]
+  })

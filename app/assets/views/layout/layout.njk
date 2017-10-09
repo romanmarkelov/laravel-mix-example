@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        {% if title %}
+            {{ title }} | site name
+        {% else %}
+            crazy-mix
+        {% endif %}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="{{ pageClass }}">
+<div id="app" class="wrapper">
+    {% include './header.njk' %}
+    <div class="content-wrapper container-fluid">
+        {% block beforeContent %}
+        {% endblock %}
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% block afterContent %}
+        {% endblock %}
+    </div>
+    {% include './footer.njk' %}
+    {% include './sidebar.njk' %}
+</div>
+</body>
+</html>

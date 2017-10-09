@@ -12,6 +12,8 @@
     "bootstrap": "4.0.0-beta",
     "laravel-mix": "1.4.5",
     "normalize.css": "7.0.0",
+    "nunjucks": "3.0.1",
+    "nunjucks-webpack-plugin": "3.0.0",
     "postcss-assets": "5.0.0",
     "postcss-cssnext": "3.0.2",
     "postcss-font-magician": "2.1.0",
