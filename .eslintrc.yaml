@@ -1,0 +1,14 @@
+root: true
+env:
+  node: true
+extends:
+  - airbnb-base
+globals:
+  console: true
+rules:
+  quotes:
+    - error
+    - single
+  no-param-reassign:
+    - 2
+    - props: false
