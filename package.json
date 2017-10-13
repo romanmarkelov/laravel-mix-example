@@ -6,6 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "precommit": "lint-staged"
   },
@@ -32,6 +34,8 @@
   },
   "private": true,
   "devDependencies": {
+    "browser-sync": "2.18.13",
+    "browser-sync-webpack-plugin": "1.2.0",
     "eslint": "4.8.0",
     "eslint-config-airbnb-base": "12.0.2",
     "eslint-plugin-import": "2.7.0",

@@ -1,1 +1,3 @@
-export default () => 1000;
+import greetingConsole from './modules/greetingConsole';
+
+greetingConsole('Hello World!');
