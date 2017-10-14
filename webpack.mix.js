@@ -32,6 +32,7 @@ mix
       })
     ]
   })
+  .sourceMaps()
   .browserSync({
     proxy: false,
     server: {

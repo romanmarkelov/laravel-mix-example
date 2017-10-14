@@ -6,11 +6,13 @@
 
 // 2. Vendors
 @import
-'~normalize.css',
-'~bootstrap/scss/bootstrap-grid.scss',
+'~bootstrap/scss/functions',
 '~bootstrap/scss/_mixins.scss',
-'~bootstrap/scss/utilities/_text.scss',
-'~bootstrap/scss/_utilities.scss';
+'~bootstrap/scss/_variables.scss',
+'~bootstrap/scss/_utilities.scss',
+'~bootstrap/scss/bootstrap-grid.scss',
+'~bootstrap/scss/_reboot.scss',
+'~bootstrap/scss/utilities/_text.scss';
 
 // 3. Base stuff
 @import
