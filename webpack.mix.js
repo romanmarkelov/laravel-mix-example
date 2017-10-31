@@ -1,20 +1,24 @@
 const mix = require('laravel-mix');
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
+const cssNext = require('postcss-cssnext');
+const cssShort = require('postcss-short');
+const cssAssets = require('postcss-assets');
+const cssFontMagician = require('postcss-font-magician');
 
 const PATHS = {
   assets: 'app/assets',
-  dist: 'app/dist'
+  dist: 'app/dist',
 };
 
 mix
   .setPublicPath(PATHS.dist)
   .options({
     postCss: [
-      require('postcss-cssnext')(),
-      require('postcss-short')(),
-      require('postcss-assets')(),
-      require('postcss-font-magician')()
-    ]
+      cssNext(),
+      cssShort(),
+      cssAssets(),
+      cssFontMagician(),
+    ],
   })
   .js(`${PATHS.assets}/js/app.js`, 'js')
   .sass(`${PATHS.assets}/scss/main.scss`, 'css')
@@ -25,23 +29,23 @@ mix
           {
             from: `${PATHS.assets}/views/index.njk`,
             to: 'html/index.html',
-            context: { user: 'webmarkelov' }
+            context: { user: 'webmarkelov' },
           },
-          { from: `${PATHS.assets}/views/news.njk`, to: 'html/news.html' }
-        ]
-      })
-    ]
+          { from: `${PATHS.assets}/views/news.njk`, to: 'html/news.html' },
+        ],
+      }),
+    ],
   })
   .sourceMaps()
   .browserSync({
     proxy: false,
     server: {
       baseDir: 'app',
-      index: 'dist/html/index.html'
+      index: 'dist/html/index.html',
     },
     files: [
       `${PATHS.dist}/html/*.html`,
       `${PATHS.dist}/css/*.css`,
       `${PATHS.dist}/js/*.js`,
-    ]
+    ],
   });
