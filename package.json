@@ -11,7 +11,7 @@
     "production": "./node_modules/.bin/cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-beta",
+    "bootstrap": "4.0.0-beta.2",
     "laravel-mix": "1.6.1",
     "nunjucks": "3.0.1",
     "nunjucks-webpack-plugin": "3.0.0",
