@@ -13,6 +13,7 @@ const PATHS = {
 mix
   .setPublicPath(PATHS.dist)
   .options({
+    processCssUrls: false,
     postCss: [
       cssNext(),
       cssShort(),
