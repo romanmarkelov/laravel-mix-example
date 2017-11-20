@@ -1,9 +1,5 @@
 {
-  "name": "crazy-mix",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Roman Markelov <webmarkelov@gmail.com>",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "./node_modules/.bin/cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "./node_modules/.bin/cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -14,14 +10,11 @@
     "bootstrap": "4.0.0-beta.2",
     "cross-env": "5.1.1",
     "laravel-mix": "1.6.1",
-    "nunjucks": "3.0.1",
-    "nunjucks-webpack-plugin": "3.0.0",
     "postcss-assets": "5.0.0",
     "postcss-cssnext": "3.0.2",
     "postcss-font-magician": "2.1.0",
     "postcss-short": "4.1.0"
   },
-  "private": true,
   "devDependencies": {
     "browser-sync": "2.18.13",
     "browser-sync-webpack-plugin": "1.2.0",
@@ -30,6 +23,8 @@
     "eslint-config-prettier": "2.8.0",
     "eslint-plugin-import": "2.8.0",
     "stylelint": "8.2.0",
-    "stylelint-config-standard": "17.0.0"
+    "stylelint-config-standard": "17.0.0",
+    "nunjucks": "3.0.1",
+    "nunjucks-webpack-plugin": "3.0.0"
   }
 }
