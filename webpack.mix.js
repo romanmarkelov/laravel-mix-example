@@ -26,11 +26,11 @@ mix
   .webpackConfig({
     plugins: [
       new NunjucksWebpackPlugin({
-        template: [
+        templates: [
           {
             from: `${PATHS.assets}/views/index.njk`,
             to: 'html/index.html',
-            context: { user: 'webmarkelov' },
+            context: { data: 'Example' },
           },
           { from: `${PATHS.assets}/views/news.njk`, to: 'html/news.html' },
         ],
